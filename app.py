@@ -20,7 +20,7 @@ def main():
         st.pyplot(figure)
 
 def predict_class(image):
-    classifier_model = tf.keras.models.load_model('E:\\Swapnil\\SDP Data Science COVID-19\\my_model_3.h5', compile=False)
+    classifier_model = tf.keras.models.load_model('my_model_3.h5', compile=False)
     shape = (224, 224, 3)
     model = tf.keras.Sequential([hub.KerasLayer(classifier_model, input_shape=shape)])
     test_image = image.resize((224, 224))
