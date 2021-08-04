@@ -34,7 +34,7 @@ def predict_class(image):
     if predictions[0] < 0.5:
         return f"The image uploaded is COVID Infected with {round(100 - predictions[0][0] * 100, 2)} % confidence!!"
     else:
-        return f"The image uploaded is Normal with {round(100 - predictions[0][0] * 100, 2)} % confidence!!"
+        return f"The image uploaded is Normal with {round(predictions[0][0] * 100, 2)} % confidence!!"
 
 
 if __name__ == '__main__':
